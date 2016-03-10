@@ -5,15 +5,15 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Text.RegularExpressions;
 
-namespace Regular01                //   Программа будет проверять корректность ввода логина. Корректным логином будет строка от 2-х до
-                                   //   10-ти символов, содержащая только буквы и цифры, и при этом цифра не может быть первой
+namespace Regular01					//   Программа будет проверять корректность ввода логина. Корректным логином будет строка от 2-х до
+									//   10-ти символов, содержащая только буквы и цифры, и при этом цифра не может быть первой
 {
-    class Program
+	class Program
 	{
 		static void Main(string[] args)
 		{
 			string str;
-			Regex myReg = new Regex(@"^[a-zA-Z][a-zA-Z0-9]{1,9}$");
+			Regex myReg = new Regex(@"^[a-z][a-z0-9]{1,9}$", RegexOptions.IgnoreCase);
 
 			do
 			{
@@ -26,7 +26,7 @@ namespace Regular01                //   Программа будет прове
 
 				Console.ReadLine();
 			}
-			while (true);			//для удобной проверки (27 = Esc)
+			while (true);			//для удобной проверки
 		}
 	}
 }

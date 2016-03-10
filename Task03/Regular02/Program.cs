@@ -12,10 +12,10 @@ namespace Regular02						//	программа будет искать в исх
 		static void Main(string[] args)
 		{
 			string input;
-			Regex myReg = new Regex(@"[а-я]*металл[а-я]*", RegexOptions.IgnoreCase);
+			Regex myReg = new Regex(@"[а-я-]*металл[а-я-]*", RegexOptions.IgnoreCase);
 			//Console.WriteLine("Введите строку:");						//это тоже можно, но Ctrl+V в консоль не сделать, так что для проверки строка
 			//input = Console.ReadLine();
-			input = "металл, металлический, металлы, неметаллы, метачисло, как дела, сметана, талый лёд, методика, Тал Раши, МеТАлл, НеМеТаЛЛ, МЕТАЛЛ, метАЛЛокоНструкция, {неметаллический}";
+			input = "металл, @металлический*, (металлы), \\неметаллы/, метачисло, как дела, сметана, талый лёд, методика, металл-оборотень, МеТАлл, НеМеТаЛЛ, МЕТАЛЛ, метАЛЛокоНструкция, {неметаллический}";
 
 			foreach (Match reg in myReg.Matches(input))
 				Console.WriteLine(reg.Value);
