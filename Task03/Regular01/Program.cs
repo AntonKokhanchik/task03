@@ -13,8 +13,7 @@ namespace Regular01                //   Программа будет прове
 		static void Main(string[] args)
 		{
 			string str;
-			Regex myReg = new Regex(@"^[a-zA-Z]\w{1,9}$");
-			
+			Regex myReg = new Regex(@"^[a-zA-Z][a-zA-Z0-9]{1,9}$");
 
 			do
 			{
