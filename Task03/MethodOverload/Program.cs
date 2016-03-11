@@ -106,7 +106,8 @@ namespace MethodOverload
 		{
 			if (a < 0)
 				return -a;
-			else return a;
+			else
+				return a;
 		}
 
 		/// <summary>
@@ -116,7 +117,8 @@ namespace MethodOverload
 		{
 			if (a < 0)
 				return -a;
-			else return a;
+			else
+				return a;
 		}
 
 		/// <summary>
@@ -126,7 +128,8 @@ namespace MethodOverload
 		{
 			if (a < 0)
 				return -a;
-			else return a;
+			else
+				return a;
 		}
 	}
 }

@@ -25,7 +25,8 @@ namespace Regular01
 
 				if (myReg.IsMatch(str))
 					Console.WriteLine("Логин корректный");
-				else Console.WriteLine("Логин не является корректным");
+				else 
+					Console.WriteLine("Логин не является корректным");
 
 				Console.WriteLine("Esc для выхода");
 			}
