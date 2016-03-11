@@ -6,16 +6,7 @@ using System.Threading.Tasks;
 
 namespace extensions
 {
-	static class MyExtensions
-	{
-		public static string GetString(this List<int> list)						
-		{
-			StringBuilder result = new StringBuilder();
-			foreach (int elem in list)
-				result = result.AppendFormat("{0}, ", elem);
-			return result.ToString();
-		}
-	}
+	
 
 	class Program					//	реализует интерфейс IList, который позволяет получить перечисление
 									//	элементов списка через запятую в виде строки.
@@ -23,11 +14,14 @@ namespace extensions
 	{
 		static void Main(string[] args)
 		{
-			int[] arr = { 1, 2, 3, 1, 4, 5, 6, 8, 7, 97, 1, 1, -4, 5, -2 };
-			List<int> lst = new List<int>(arr);
-			string s = lst.GetString();
+			int[] arrI = { 1, 2, 3, 1, 4, 5, 6, 8, 7, 97, 1, 1, -4, 5, -2 };
+			List<int> lstI = new List<int>(arrI);
 
-			Console.WriteLine(s);
+			string [] arrS = { "hi", "привет", "321134", "2+2=4 - верно", "это текстовые строки" };
+			List<string> lstS = new List<string>(arrS);
+
+			Console.WriteLine(lstI.GetString());
+			Console.WriteLine(lstS.GetString());
 
 			Console.ReadLine();
 		}
