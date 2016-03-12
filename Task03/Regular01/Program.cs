@@ -5,9 +5,12 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Text.RegularExpressions;
 
-namespace Regular01					//   Программа будет проверять корректность ввода логина. Корректным логином будет строка от 2-х до
-									//   10-ти символов, содержащая только буквы и цифры, и при этом цифра не может быть первой
+namespace Regular01
 {
+	/// <summary>
+	/// будет проверять корректность ввода логина. Корректным логином будет строка от 2-х до
+	/// 10-ти символов, содержащая только буквы и цифры, и при этом цифра не может быть первой;
+	/// </summary>
 	class Program
 	{
 		static void Main(string[] args)
@@ -22,11 +25,12 @@ namespace Regular01					//   Программа будет проверять к
 
 				if (myReg.IsMatch(str))
 					Console.WriteLine("Логин корректный");
-				else Console.WriteLine("Логин не является корректным");
+				else 
+					Console.WriteLine("Логин не является корректным");
 
-				Console.ReadLine();
+				Console.WriteLine("Esc для выхода");
 			}
-			while (true);			//для удобной проверки
+			while (Console.ReadKey(true).Key != ConsoleKey.Escape);
 		}
 	}
 }

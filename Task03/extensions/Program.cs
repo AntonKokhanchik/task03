@@ -7,10 +7,11 @@ using System.Threading.Tasks;
 namespace extensions
 {
 	
-
-	class Program					//	реализует интерфейс IList, который позволяет получить перечисление
-									//	элементов списка через запятую в виде строки.
-									//	не доделано
+	/// <summary>
+	/// реализует интерфейс IList, который позволяет получить перечисление
+	/// элементов списка через запятую в виде строки.
+	/// </summary>
+	class Program
 	{
 		static void Main(string[] args)
 		{

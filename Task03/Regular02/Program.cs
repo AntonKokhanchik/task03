@@ -5,8 +5,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Text.RegularExpressions;
 
-namespace Regular02						//	программа будет искать в исходном тексте слово «металл» и его однокоренные слова, и выводить их на консоль.
+namespace Regular02
 {
+	/// <summary>
+	/// программа будет искать в исходном тексте слово «металл» и его однокоренные слова, и выводить их на консоль.
+	/// </summary>
 	class Program
 	{
 		static void Main(string[] args)
